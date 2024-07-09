@@ -63,7 +63,7 @@ function Login() {
           <br />
           <button>Login</button>
         </form>
-        <a onClick={()=>navigate('/signup')}>Signup</a>
+        <a onClick={()=>navigate('/signup')}>Signp</a>
       </div>
     </div>
   );

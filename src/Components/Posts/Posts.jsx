@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Firestore } from '../../firebase/config';
+import { firestore } from '../../firebase/config';
 import { collection, getDocs } from 'firebase/firestore';
 import { FirebaseContext } from '../../store/FirebaseContext'
 import { postContext } from '../../store/PostContext';
@@ -12,7 +12,7 @@ function Posts() {
   const { setPostDetails } = useContext(postContext)
   const navigate = useNavigate()
   useEffect(() => {
-    const productCollection = collection(Firestore, "products")
+    const productCollection = collection(firestore, "products")
     getDocs(productCollection).then((snapshot) => {
       const posts = snapshot.docs.map((product) => {
         return {

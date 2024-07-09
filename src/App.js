@@ -8,7 +8,6 @@ import { auth } from './firebase/config';
 import Post from './store/PostContext'
 
 //import components
-
 import Home from './Pages/Home';
 import Signup from './Pages/Signup'
 import Login from './Pages/Login'
